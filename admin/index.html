@@ -1,68 +1,91 @@
+<!DOCTYPE html>
 <html>
 
+
 <head>
-	<title> Online Music Library </title>
+    <link rel="icon" href="image/online-music.png" type="image" />
+    <link rel="stylesheet" href="/css/design.css"/>
+    <title> Online Music Library </title>
+    <style type="text/css">
+       
+
+
+    </style>
+
 </head>
 
 <body>
 
 
 
-	<!-- <div id="heading" style="max-width:100%;max-height:100%;border:1px solid black">
-			<h1 align="center"> Online Music Library </h1>
-		</div> -->
-
-	<div id="heading" style="position: relative; max-width:100%;max-height:100%;border:1px solid black;min-height:10%;">
-		<div style="display: inline-flex;"><img src="image\online-music.png" height="70px" width="70px" /></div>
-        <div style="display: inline-flex;">    
-            
-		</div>
-	</div>
+    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
+        <div class="heading">
+        
+        <div class="menu">
+            <!-- <div style="display: none;"> -->
+            <div style="display: inline-flex;"><img src="/image/online-music.png" height="70px" width="70px" /></div>
 
 
 
-	<div
-		style="border:1px solid black;overflow:auto;max-height:100%;min-height:82.4%;min-width:auto;max-width:100%;margin-top:0.1%">
-		<h3 Align="center"> Welcome Admin!</h3>
-        <h3 align="center" style="margin-top: 50px;"><b>Admin Login</b></h3>
-        <table align="center" cellspacing="15">   
-            <form action="Home.html">
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" required="required"/></td>
-            </tr>
-             <tr>
-                <td>Password: </td>
-                <td><input type="password"  name="password" required="required"/></td>
-             </tr>
-             <tr>
-             <td> Category </td>
-              <td><label>
-                <select name="utype" disabled>
+            <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
+            <input type="submit" name="search">
+            <a class="menuitem-active" href="login.html" >Login</a>
+        </div>
+    </div>
+    </div>
+    <hr style="color: white;">
+    <div style="position:absolute;">
+    <div class="pqueue" style="position:fixed;"> 
+        <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1550px;height: 100vh;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
+            <center><h2 style="margin-left:2vw;color: white;"> Admin Login </h2>
+            <form action="" method="post" style="border: 1px dashed white;">
                 
-                 
-                  <option value="admin" selected>Admin</option>
-                  
-                  </select>
-              </label></td>
-            </tr>
-            </tr>
-             <tr>
-                 <td colspan="2" align="center"><input type="submit" name="submit" value="Login" style="width: 90px"/></td>
-             </tr>  
-            
-            </form>
-        </table>  
+                    
+                     <table style="border: 2px solid white;color: white;" cellspacing="15">   
+                         <tr>
+                             <td>Username: </td>
+                             <td><input type="text" name="username" /></td>
+                         </tr>
+                          <tr>
+                             <td>Password: </td>
+                             <td><input type="password"  name="password"/></td>
+                          </tr>
+                          <tr>
+                          <td> Category </td>
+                           <td><label>
+                             <select name="utype" disabled>
+                               <option value="admin" selected>Admin</option> 
+                               </select>
+                           </label></td>
+                         </tr>
+                         </tr>
+                          <tr>
+                              <br>
+                              <br>
+                              <td colspan="2" align="center"><a style="border: 1px solid white;
+                              text-decoration: none;margin-top:20px;padding:4px 25px;
+                              background-color: white;color:black;
+                              border-radius: 30px;width: 60px;" href="home.html">Login</a></td>
+                          </tr>       
+                     </table>  
+                    
+                    </center>
+             </form>    
+                    <hr>
+               <br><br><br><br><br><br><br><br><br><br>
+        </div>  
+    </div>
+</div>
 
-	</div>
 
-	<div style="bottom:0.5%;position:fixed;border:1px solid black;max-width:100%;min-width:99%;margin-top:0.1%;">
-
-		<center>
-			<pre>&copy; Copyrights are reserved by yash shah</pre>
-		</center>
-	</div>
-
-
+<div style="position:relative">
+<div style="bottom:0px;position: fixed;min-width: 100vw;color: white;">
+    <hr>    
+    <center>&copy; copyrights reserved 2019</center>
+    </div>
+</div>
+</div>
 
 </body>
+
+</html>

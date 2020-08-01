@@ -1,52 +1,91 @@
+
+
+
+<!DOCTYPE html>
 <html>
 
+
 <head>
-	<title> Online Music Library </title>
+    <link rel="icon" href="image/online-music.png" type="image" />
+    <link rel="stylesheet" href="/css/design.css"/>
+    <title> Online Music Library </title>
+    <style type="text/css">
+       
+
+
+    </style>
+
 </head>
 
 <body>
 
 
 
-	<!-- <div id="heading" style="max-width:100%;max-height:100%;border:1px solid black">
-			<h1 align="center"> Online Music Library </h1>
-		</div> -->
-
-	<div id="heading" style="position: relative; max-width:100%;max-height:100%;border:1px solid black;min-height:10%;">
-		<div style="display: inline-flex;"><img src="image\online-music.png" height="70px" width="70px" /></div>
-		<div style="display: inline-flex;"><a href="home.html" style="margin-left:30px;">HOME</a>
-			<a href="Addsong.html" style="margin-left:30px;">Add</a>
-
-			<a href="Updatemusic.html" style="margin-left:30px;">Update</a>
-
-			<a href="Deletemusic.html" style="margin-left:30px;">Delete</a>
-
-			<a href="Searchmusic.html" style="margin-left:30px;">Search</a>
+    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
+        <div class="heading">
+        
+        <div class="menu">
+            <!-- <div style="display: none;"> -->
+            <div style="display: inline-flex;"><img src="image/online-music.png" height="70px" width="70px" /></div>
+            <a class="menuitem" href="home.html">Home</a>
+            <a class="menuitem" href="Addsong.html">Add</a>
+            <a class="menuitem" href="Updatemusic.html" >Update</a>
+            <a class="menuitem-active" href="Deletemusic.html">Delete</a>
+			<a class="menuitem" href="Searchmusic.html">Search</a>
+			
 
 
-			<input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
-			<input type="submit" name="search">
-			<a href="index.html" style="right: 0;position: absolute;">LogOut</a>
-		</div>
-	</div>
+			
+            <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
+            <input type="submit" name="search">
+            <a class="menuitem" href="index.html" >Log Out</a>
+        </div>
+    </div>
+    </div>
+    <hr style="color: white;">
+    <div style="position:absolute;">
+    <div class="pqueue" style="position:fixed;">
+    <div id="queue" class="queue" >
+        <ul>
+            <h2 style="color: white;">Queue</h2>
+            <li class="pop">Music 1</li>
+            <li class="pop">Music 2</li>
+            <li class="pop">Music 3</li>
+            <li class="pop">Music 4</li>
+            <li class="pop">Music 5</li>
+            <li class="pop">Music 6</li>
+            <li class="pop">Music 7</li>
+            <li class="pop">Music 8</li>
+            <li class="pop">Music 9</li>
+            <li class="pop">Music 10</li>
+            <li class="pop">Music 11</li>
+            <li class="pop">Music 12</li>
+            <li class="pop">Music 13</li>
+            <li class="pop">Music 14</li>
+        </ul>
+    </div>
 
 
 
-	<div
-		style="border:1px solid black;overflow:auto;max-height:100%;min-height:82.4%;min-width:auto;max-width:100%;margin-top:0.1%">
-		<h3 Align="center"> Welcome Admin!</h3>
-		<h2 align="center"> Fill for Add new music </h2>
-		<table align="center" border="1">
+
+
+
+    
+   
+    <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1350px;height: 100vh;margin-left: 145px;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
+            
+			<h2 align="center"> Fill for Add new music </h2>
+		<table align="center" style="border:1px solid white;color: white;">
 			<form>
 				<tr>
 					<td>
 						<h5 align="center"> Id </h5>
-					<td> <input type="text" name="id" value="" placeholder="song id"></td>
+					<td> <input type="text" name="id" value="" placeholder="song id" disabled></td>
 				</tr>
 				<tr>
 					<td>
 						<h5 align="center"> Name </h5>
-					<td> <input type="text" name="mname" value="" placeholder="Music name" disabled> </td>
+					<td> <input type="text" name="mname" value="" placeholder="Music name" disabled></td>
 				</tr>
 				<tr>
 					<td>
@@ -62,7 +101,7 @@
 				<tr>
 					<td>
 						<h5 align="center">Movie </h5>
-					<td> <input type="text" name="movie" value="" placeholder="Movie" disabled> </td>
+					<td> <input type="text" name="movie" value="" placeholder="Movie" disabled></td>
 				</tr>
 				<tr>
 					<td>
@@ -74,7 +113,7 @@
 						<h5 align="center">Category</h5>
 					</td>
 					<td>
-						<select disabled>
+						<select id="musicType" disabled>
 							<option name="category" value="">--SELECT--</option>
 							<option name="category" value="Romance">Romance </option>
 							<option name="category" value="festival">Festival</option>
@@ -101,22 +140,39 @@
 
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" value="Search">
-						<input type="submit" value="Delete" disabled>
+						<a style="border: 1px solid white;
+						text-decoration: none;margin-top:20px;padding:4px 25px;
+						background-color: white;color:black;
+						border-radius: 30px;width: 60px;" href="#">Search</a>
+						<a style="border: 1px solid white;
+						text-decoration: none;margin-top:20px;padding:4px 25px;
+						background-color: white;color:black;
+						border-radius: 30px;width: 60px;opacity: 0.3;" href="#">Delete</a>
+						<input type="Reset" value="Clear">
 					</td>
 			</form>
 		</table>
+		  <hr>
+		  <br><br><br><br><br><br><br><br><br><br><br><br>
+   
+    </div>
+    
+    </div>
+    
+</div>
 
 
-	</div>
-
-	<div style="bottom:0.5%;position:fixed;border:1px solid black;max-width:100%;min-width:99%;margin-top:0.1%;">
-
-		<center>
-			<pre>&copy; Copyrights are reserved by yash shah</pre>
-		</center>
-	</div>
-
-
+<div style="position:relative">
+<div style="bottom:0px;position: fixed;min-width: 100vw;">
+    <div class="heading"
+        style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
+        <h1>Media Player</h1>
+        <hr>
+        <center>&copy; copyrights reserved 2019</center>
+    </div>
+</div>
+</div>
 
 </body>
+
+</html>

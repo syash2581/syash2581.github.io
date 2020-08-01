@@ -1,0 +1,121 @@
+body{
+    background-color: black;
+}
+.heading{
+    background-color: black;
+    color: white;
+    position:relative;
+    /* box-shadow:-3px 3px 7px blue; */
+    border:0.5px 0px white;
+    top: 0px;
+    max-width:100%;
+    max-height:fit-content;
+    min-height:5%;
+}  
+.heading a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+
+
+
+.queue ul li{
+    list-style-type:none;
+    border: 1px solid;
+    margin-top: 10px;
+    padding: 5px;
+    box-shadow: 0px 3px 4px #bbb;
+}
+.queue{
+    z-index: -1;
+    float: left;
+    min-height: 70vh;
+    max-height: 77vh;
+    margin-top: 10vh;
+    
+    overflow:scroll;
+    border: 1px solid black;
+    background: blue;
+    position: fixed;
+    transition: width 100ms;
+    transition-timing-function: linear;
+}
+.queue:hover{
+   z-index: 0;
+   float: left;
+    width: 250px;
+    background-color:blue;
+}
+.pop{
+    border-radius: 20px;
+    transition: width 100ms;
+    transition-timing-function: linear;
+    margin-right: 25px;
+    background-color: lawngreen;
+}
+.pop:hover{
+    margin-right: 25px;
+    height: 30px;
+    width: 190px;
+    background-color:cyan;
+}
+.songblock{
+    height:25vh;
+    width:10vw;
+    border:1px solid white;
+   
+    text-decoration: none;
+    color: royalblue;
+    margin:0px 10px ;
+}
+.songblock:hover{
+    box-shadow: 3px 3px 5px white;
+}
+.songblock .image{
+    color: white;
+    height: 20vh;
+    width: 10vw;
+}
+
+
+
+.menu{
+    display: inline-flexbox;
+    flex-direction: column;
+}
+.menuitem{
+    display: inline-flex;
+    margin-left: 30px;
+}
+.menuitem:hover{
+    box-shadow: 0px 3px 4px  red;   
+    margin-left: 30px;
+}
+.menuitem-active{
+    box-shadow: 0px 3px 4px  greenyellow;
+    margin-left: 30px;
+}
+
+
+
+
+#content{
+    margin-top: 11vh;
+    z-index: -1;
+    position:absolute;
+    min-width:1550px;
+    height: 100vh;
+    overflow: auto;
+     border: 1px solid white;
+     box-shadow: blue;
+     color: white;
+}
+
+#content::-webkit-scrollbar {
+display: none;
+}
+.queue::-webkit-scrollbar {
+display: none;
+}

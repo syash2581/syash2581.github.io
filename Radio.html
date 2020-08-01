@@ -1,78 +1,179 @@
+<!DOCTYPE html>
 <html>
+
+
 <head>
-<title> Online Music Library </title>
+    <link rel="icon" href="image/online-music.png" type="image" />
+    <link rel="stylesheet" href="css/design.css"/>
+    <title> Online Music Library </title>
+    <style type="text/css">
+       
+
+
+    </style>
+
 </head>
 
 <body>
 
 
-		<div id="heading" style="width:800px;height:100px;margin-left:250px;padding-top:50px;">
-			<h1 align="center"> Online Music Library </h1>
-		</div>
-		
-		<a href="index.html" style="margin-left:30px;">HOME</a>
-		
-			<a href="Browse.html" style="margin-left:30px;">Browse</a>
-		
-			<a href="Discover.html" style="margin-left:30px;">Discover</a>
-		
-			<a href="Radio.html" style="margin-left:30px;">Radio</a>
-		
-			<a href="login.html" style="margin-left:30px;">My Music</a>
-		
-			
-			
-			<input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
-			<input type="submit" name="search">
-		<br>
-		<br>
-		<br>
-		
-		
-		<div style="float: left;overflow: auto;">
+
+    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
+        <div class="heading">
+        
+        <div class="menu">
+            <!-- <div style="display: none;"> -->
+            <div style="display: inline-flex;"><img src="image/online-music.png" height="70px" width="70px" /></div>
+            <a class="menuitem" href="index.html">Home</a>
+            <a class="menuitem" href="Browse.html">Browse</a>
+            <a class="menuitem" href="Discover.html">Discover</a>
+            <a class="menuitem-active" href="Radio.html">Radio</a>
+            <a class="menuitem" href="login.html">My Music</a>
+
+
+
+            <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
+            <input type="submit" name="search">
+            <a class="menuitem" href="login.html" >Login</a>
+        </div>
+    </div>
+    </div>
+    <hr style="color: white;">
+    <div style="position:absolute;">
+    <div class="pqueue" style="position:fixed;">
+        <div id="queue" class="queue" >
             <ul>
-                <li>Music 1</li>
-                <li>Music 2</li>
-                <li>Music 3</li>
-                <li>Music 4</li>
-                <li>Music 5</li>
-                <li>Music 6</li>
-                <li>Music 7</li>
-                <li>Music 8</li>
-                <li>Music 9</li>
-                <li>Music 10</li>
+                <h2 style="color: white;">Queue</h2>
+                <li class="pop">Music 1</li>
+                <li class="pop">Music 2</li>
+                <li class="pop">Music 3</li>
+                <li class="pop">Music 4</li>
+                <li class="pop">Music 5</li>
+                <li class="pop">Music 6</li>
+                <li class="pop">Music 7</li>
+                <li class="pop">Music 8</li>
+                <li class="pop">Music 9</li>
+                <li class="pop">Music 10</li>
+                <li class="pop">Music 11</li>
+                <li class="pop">Music 12</li>
+                <li class="pop">Music 13</li>
+                <li class="pop">Music 14</li>
             </ul>
-        </div>
-        <div>
-              <h5 style="margin-left:120px;"> Mirchi Play </h5>
-            <nav style="margin-left:120px;">
-                <a href="song.html">song 1</a>
-                <a href="song.html">song 2</a>
-                <a href="song.html">song 3</a>
-                <a href="song.html">song 4</a>
-                <a href="song.html">song 5</a>
-            </nav>
-             <h5 style="margin-left:120px;"> Ganna radio </h5>
-            <nav style="margin-left:120px;">
-                <a href="song.html">song 1</a>
-                <a href="song.html">song 2</a>
-                <a href="song.html">song 3</a>
-                <a href="song.html">song 4</a>
-                <a href="song.html">song 5</a>
-            </nav>
-            
-        </div>
-    <br>
-	<br>
-	<br>
-	<br>
-    <div>
-        <center><pre><   |>    ></pre></center>
+        </div> 
+        <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1350px;height: 100vh;margin-left: 145px;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
+            <h2 style="margin-left:2vw;color: white;">Gaana Radio </h2>
+                <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 1</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 2</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 3</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 4</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 5</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 6</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 7</center>
+                        </div> 
+                    </a>
+                    
+                </nav>
+                <hr>
+                
+                <h2 style="margin-left:2vw;color: white;"> Mirchi Play </h2>
+                <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 1</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 2</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 3</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 4</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 5</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 6</center>
+                        </div> 
+                    </a>
+                    <a class="songblock" style="display: inline-flex;" href="song.html">
+                        <div class="image">
+                            <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                            <center>Song 7</center>
+                        </div> 
+                    </a>
+                    
+                </nav>
+                <hr>
+               
+				<br><br><br><br><br><br><br><br><br><br>
+        </div>  
     </div>
-    <div>
-        <center><pre>&copy; Copyrights are reserved by yash shah</pre></center>
+</div>
+
+
+<div style="position:relative">
+<div style="bottom:0px;position: fixed;min-width: 100vw;">
+    <div class="heading"
+        style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
+        <h1>Media Player</h1>
+        <hr>
+        <center>&copy; copyrights reserved 2019</center>
     </div>
-		
-		
-     
+</div>
+</div>
+
 </body>
+
+</html>

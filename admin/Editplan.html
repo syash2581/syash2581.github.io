@@ -1,57 +1,71 @@
+<!DOCTYPE html>
 <html>
 
+
 <head>
-	<title> Online Music Library </title>
+    <link rel="icon" href="image/online-music.png" />
+    <link rel="stylesheet" href="/css/design.css"/>
+    <title> Online Music Library </title>
+    <style type="text/css">
+       
+
+
+    </style>
+
 </head>
 
 <body>
 
 
 
-	<!-- <div id="heading" style="max-width:100%;max-height:100%;border:1px solid black">
-			<h1 align="center"> Online Music Library </h1>
-		</div> -->
+    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
+        <div class="heading">
+        
+        <div class="menu">
+            <!-- <div style="display: none;"> -->
+            <div style="display: inline-flex;"><img src="image/online-music.png" height="70px" width="70px" /></div>
+            <a class="menuitem" href="home.html">Home</a>
+            <a class="menuitem" href="Addplan.html">Add Plan</a>
+            <a class="menuitem-active" href="Editplan.html" >Edit Plan</a>
+            <a class="menuitem" href="Deleteplan.html">Delete Plan</a>
+			<!-- <a class="menuitem" href="Searchmusic.html">Search Plan</a> -->
+            <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
+            <input type="submit" name="search">
+            <a class="menuitem" href="index.html" >Log Out</a>
+        </div>
+    </div>
+    </div>
+    <hr style="color: white;">
+    <div style="position:absolute;">
+    <div class="pqueue" style="position:fixed;">
+    <div id="queue" class="queue" >
+        <ul>
+            <h2 style="color: white;">Queue</h2>
+            <li class="pop">Music 1</li>
+            <li class="pop">Music 2</li>
+            <li class="pop">Music 3</li>
+            <li class="pop">Music 4</li>
+            <li class="pop">Music 5</li>
+            <li class="pop">Music 6</li>
+            <li class="pop">Music 7</li>
+            <li class="pop">Music 8</li>
+            <li class="pop">Music 9</li>
+            <li class="pop">Music 10</li>
+            <li class="pop">Music 11</li>
+            <li class="pop">Music 12</li>
+            <li class="pop">Music 13</li>
+            <li class="pop">Music 14</li>
+        </ul>
+    </div>
 
-	<div id="heading"
-		style="position: relative; max-width:100%;max-height:100%;border:1px solid black;min-height:10%;padding-top:3%;;margin-top:0.1%">
-		<div style="display: inline-flex;"><img src="image\online-music.png" height="70px" width="70px" /></div>
-		<div style="display: inline-flex;"><a href="home.html" style="margin-left:30px;">HOME</a>
-
-
-			<a href="Addplan.html" style="margin-left:30px;">Add plan</a>
-
-			<a href="Editplan.html" style="margin-left:30px;">Edit Plan</a>
-
-			<a href="Deleteplan.html" style="margin-left:30px;">Delete Plan</a>
-
-			<a href="Searchplan.html" style="margin-left:30px;">Search Plan</a>
-			<input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
-			<input type="submit" name="search">
-			<a href="index.html" style="right: 0;position: absolute;">LogOut</a>
-		</div>
-	</div>
 
 
 
-	<div
-		style="float: left;overflow: auto;max-height:100%;border:1px solid black;min-height:75.5%;min-width:15%;margin-top:0.1%">
-		<ul>
-			<h5>Queue</h5>
-			<li>Plan 1</li>
-			<li>plan 2</li>
-			<li>plan 3</li>
-			<li>plan 4</li>
-			<li>plan 5</li>
-			<li>plan 6</li>
-			<li>Plan 7</li>
-			<li>plan 8</li>
-			<li>plan 9</li>
-			<li>plan 10</li>
-		</ul>
-	</div>
-	<div
-		style="border:1px solid black;margin-left:15.2%;overflow:auto;max-height:100%;min-height:75.5%;min-width:auto;max-width:100%;margin-top:0.1%">
-		<h3 Align="center"> Welcome Admin!</h3>
+
+
+    
+   
+    <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1350px;height: 100vh;margin-left: 145px;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
 		<h2 align="center"> Add new plan </h2>
 		<table align="center" border="1">
 			<tr>
@@ -78,7 +92,7 @@
 			<tr>
 				<td>
 					<h5 align="center">validity </h5>
-				<td> <input type="text" name="pvalidity" value="" placeholder="validity" disabled> </td>
+				<td> <input type="text" name="pvalidity" value="" placeholder="validity" disabled></td>
 			</tr>
 			<tr>
 				<td>
@@ -100,22 +114,39 @@
 
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="Update Plan">
+					<a style="border: 1px solid white;
+						text-decoration: none;margin-top:20px;padding:4px 25px;
+						background-color: white;color:black;
+						border-radius: 30px;width: 60px;" href="#">Search</a>
+					<a style="border: 1px solid white;
+						text-decoration: none;margin-top:20px;padding:3px 25px;
+						background-color: white;color:black;
+						border-radius: 30px;width: 60px;opacity: 0.3;" href="#">Edit Plan</a>
 					<input type="Reset" value="Reset">
 
 		</table>
 		</form>
+            <hr>
+        <br><br><br><br><br><br><br><br><br><br>
+        
+   
+    </div>
+    
+    </div>
+    
+</div>
 
-	</div>
 
-	<div style="bottom:0.5%;position:fixed;border:1px solid black;max-width:100%;min-width:99%;margin-top:0.1%;">
-
-		<center>
-			<pre>&copy; Copyrights are reserved by yash shah</pre>
-		</center>
-	</div>
-
-
+<div style="position:relative">
+<div style="bottom:0px;position: fixed;min-width: 100vw;">
+    <div class="heading"
+        style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
+        <h1>Media Player</h1>
+        <hr>
+        <center>&copy; copyrights reserved 2019</center>
+    </div>
+</div>
+</div>
 
 </body>
 

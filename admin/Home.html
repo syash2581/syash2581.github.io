@@ -1,157 +1,525 @@
+<!DOCTYPE html>
 <html>
 
+
 <head>
+    <link rel="icon" href="image/online-music.png" />
+    <link rel="stylesheet" href="/css/design.css"/>
     <title> Online Music Library </title>
+    <style type="text/css">
+       
+
+
+    </style>
+
 </head>
 
 <body>
 
 
 
-    <!-- <div id="heading" style="max-width:100%;max-height:100%;border:1px solid black">
-			<h1 align="center"> Online Music Library </h1>
-		</div> -->
-
-    <div id="heading"
-        style="position: relative; max-width:100%;max-height:100%;border:1px solid black;min-height:10%;padding-top:3%;;margin-top:0.1%">
-        <div style="display: inline-flex;"><img src="image\online-music.png" height="70px" width="70px" /></div>
-        <div style="display: inline-flex;"><a href="home.html" style="margin-left:30px;">HOME</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="ManageMusic.html">Manage Music </a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="ManageUser.html">Manage User </a> &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="ManagePlan.html">Manage Plans </a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="statistic.html">See statistics </a> &nbsp;&nbsp;&nbsp;&nbsp;
-
+    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
+        <div class="heading">
+        
+        <div class="menu">
+            <!-- <div style="display: none;"> -->
+            <div style="display: inline-flex;"><img src="image/online-music.png" height="70px" width="70px" /></div>
+            <a class="menuitem-active" href="home.html">Home</a>
+            <a class="menuitem" href="ManageMusic.html">Manage Music</a>
+            <a class="menuitem" href="ManageUser.html">Manage User</a>
+            <a class="menuitem" href="ManagePlan.html">Manage Plans</a>
+            <a class="menuitem" href="#">See Staticsstics</a>
+           
 
             <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
             <input type="submit" name="search">
-            <a href="index.html" style="right: 0;position: absolute;">LogOut</a>
+            <a class="menuitem" href="index.html" >Log Out</a>
         </div>
     </div>
-
-
-
-    <div
-        style="float: left;overflow: auto;max-height:100%;border:1px solid black;min-height:61.2%;min-width:15%;margin-top:0.1%">
+    </div>
+    <hr style="color: white;">
+    <div style="position:absolute;">
+    <div class="pqueue" style="position:fixed;">
+    <div id="queue" class="queue" >
         <ul>
-            <h5>Queue</h5>
-            <li>Music 1</li>
-            <li>Music 2</li>
-            <li>Music 3</li>
-            <li>Music 4</li>
-            <li>Music 5</li>
-            <li>Music 6</li>
-            <li>Music 7</li>
-            <li>Music 8</li>
-            <li>Music 9</li>
-            <li>Music 10</li>
+            <h2 style="color: white;">Queue</h2>
+            <li class="pop">Music 1</li>
+            <li class="pop">Music 2</li>
+            <li class="pop">Music 3</li>
+            <li class="pop">Music 4</li>
+            <li class="pop">Music 5</li>
+            <li class="pop">Music 6</li>
+            <li class="pop">Music 7</li>
+            <li class="pop">Music 8</li>
+            <li class="pop">Music 9</li>
+            <li class="pop">Music 10</li>
+            <li class="pop">Music 11</li>
+            <li class="pop">Music 12</li>
+            <li class="pop">Music 13</li>
+            <li class="pop">Music 14</li>
         </ul>
     </div>
-    <div
-        style="border:1px solid black;margin-left:15.2%;overflow:auto;max-height:61.2%;min-height:61.2%;min-width:auto;max-width:100%;margin-top:0.1%">
-        <h3 Align="center"> Welcome Admin!</h3>
-        <h5 style="margin-left:120px;"> Top pics </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> Trending song </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> Top charts </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
-        <h5 style="margin-left:120px;"> New Releases </h5>
-        <nav style="margin-left:120px;">
-            <a href="song.html">song 1</a>
-            <a href="song.html">song 2</a>
-            <a href="song.html">song 3</a>
-            <a href="song.html">song 4</a>
-            <a href="song.html">song 5</a>
-        </nav>
-        <hr>
 
+
+
+
+
+
+    
+   
+    <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1350px;height: 100vh;margin-left: 145px;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
+        <h2 style="margin-left:2vw;color: white;"> Top Pics</h2>
+            <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 1</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 2</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 3</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 4</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 5</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 6</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 7</center>
+                    </div> 
+                </a>
+                
+            </nav>
+            <hr>
+            
+            <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+            <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 1</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 2</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 3</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 4</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 5</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 6</center>
+                    </div> 
+                </a>
+                <a class="songblock" style="display: inline-flex;" href="song.html">
+                    <div class="image">
+                        <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                        <center>Song 7</center>
+                    </div> 
+                </a>
+                
+            </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+            <hr>
+           
+           <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+           <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 1</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 2</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 3</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 4</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 5</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 6</center>
+                   </div> 
+               </a>
+               <a class="songblock" style="display: inline-flex;" href="song.html">
+                   <div class="image">
+                       <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                       <center>Song 7</center>
+                   </div> 
+               </a>
+               
+           </nav>
+       <hr>
+           
+       <h2 style="margin-left:2vw;color: white;"> Top pics </h2>
+       <nav style="margin-left:4vw;display: inline-flexbox;flex-direction: column;">
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 1</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 2</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 3</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 4</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 5</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 6</center>
+               </div> 
+           </a>
+           <a class="songblock" style="display: inline-flex;" href="song.html">
+               <div class="image">
+                   <img style="height: inherit;width:inherit;" src="image/online-music.png"/>
+                   <center>Song 7</center>
+               </div> 
+           </a>
+           
+       </nav>
+            <hr>
+        <br><br><br><br><br><br><br><br><br><br>
+        
+   
     </div>
-
-    <div style="bottom:0.5%;position:fixed;border:1px solid black;max-width:100%;min-width:99%;margin-top:0.1%;">
-        <center>
-            <pre><   |>    ></pre>
-        </center>
-        <center>
-            <pre>&copy; Copyrights are reserved by yash shah</pre>
-        </center>
+    
     </div>
+    
+</div>
 
 
+<div style="position:relative">
+<div style="bottom:0px;position: fixed;min-width: 100vw;">
+    <div class="heading"
+        style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
+        <h1>Media Player</h1>
+        <hr>
+        <center>&copy; copyrights reserved 2019</center>
+    </div>
+</div>
+</div>
 
 </body>
+
+</html>

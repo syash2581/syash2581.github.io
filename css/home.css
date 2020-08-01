@@ -1,0 +1,174 @@
+iframe{
+    position: relative;
+    margin: 0%;
+    padding: 0%;
+
+}
+.body{
+    background-color: black;
+}
+div.main{
+    min-height: 100%;
+    min-width: 100%;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 2px;
+    background-color: white;
+}
+.main .header{
+    position: fixed;
+    max-height:100px ;
+    overflow: auto;
+    min-width: 100%;
+    background-attachment: fixed;
+    background-color: black;
+    font-size: large;
+    color: white;
+    border:2px solid black;
+    display: inline-table;
+}
+
+.main .header .left{
+    height: inherit;
+    display: inline-table;
+    border: 1px solid black;
+}
+.main .header .right{
+    height: inherit;
+    display: inline-table;
+    border: 1px solid black;
+    float: right;
+}
+.main .header .right .logo{
+    max-width: 70px;
+    max-height: 70px;
+    border: 1px solid black;
+    display: inline-block;
+}
+.main .header .left .logo{
+    max-width: 70px;
+    max-height: 70px;
+    border: 1px solid black;
+    display: inline-block;
+}
+.main .header .left .title{
+    
+    font-size: larger;
+    padding-top: 0.5%;
+    padding-left:10px; 
+    overflow: auto;
+    display: inline-block;
+}
+
+.main .header .menu{
+    border: 1px solid black;
+    display: inline;
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+
+}
+.main .header .menu .item{
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 40px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+.main .header .menu .item:hover{
+    color:red;
+    display: inline-block;
+}
+.main .header .menu .item:active{
+    color:red;
+    display: inline-block;
+}
+
+
+
+
+.main .content{
+    margin-top:80px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: black;
+    border: 1px solid black;
+}
+.main .content .right{
+    border: 1px solid white;
+    min-height: 75.9%;
+    min-width: 25%;
+    max-height: 100%;
+    max-width:100% ;
+    float: right;
+    background-color: black;
+
+}
+.main .content .queue{
+    border: 1px solid white;
+    min-height: 25.1%;
+    min-width: 75%;
+    max-height:100% ;
+    max-width:100% ;
+    background-color: black;
+}
+.main .content .queue .block{
+    display: inline-block;
+    max-width: inherit;
+    max-width: inherit;
+    min-height: inherit;
+    min-width: auto;
+    border: 1px solid white;
+}
+
+
+.main .footer{
+    bottom: 0;
+    position: fixed;
+    max-height:100px ;
+    overflow: auto;
+    width: 100%;
+    background-attachment: fixed;
+    background-color: black;
+    font-size: large;
+    color: white;
+    border:2px solid black;
+    display: inline-table;
+}
+.main .footer .above{
+    max-height:100px ;
+    overflow: auto;
+    width: 100%;
+    background-attachment: fixed;
+    background-color: black;
+    font-size: large;
+    color: white;
+    border:2px solid black;
+    display: block;
+}
+.main .footer .below{
+    max-height:100px ;
+    overflow: auto;
+    width: 100%;
+    background-attachment: fixed;
+    background-color: black;
+    font-size: large;
+    color: white;
+    border:2px solid black;
+    display: block;
+}
+.main .footer .below .title{
+    
+    font-size: larger;
+    overflow: auto;
+    display: inline;
+}
+
+
+
+
+
+
