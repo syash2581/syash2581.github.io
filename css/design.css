@@ -1,8 +1,8 @@
 body{
-    background-color: black;
+    background-color: grey;
 }
 .heading{
-    background-color: black;
+    background-color: grey;
     color: white;
     position:relative;
     /* box-shadow:-3px 3px 7px blue; */
@@ -32,12 +32,12 @@ body{
     z-index: -1;
     float: left;
     min-height: 70vh;
-    max-height: 77vh;
+    max-height: 75vh;
     margin-top: 10vh;
     
     overflow:scroll;
-    border: 1px solid black;
-    background: blue;
+    border: 2px solid white;
+    background: grey;
     position: fixed;
     transition: width 100ms;
     transition-timing-function: linear;
@@ -46,26 +46,27 @@ body{
    z-index: 0;
    float: left;
     width: 250px;
-    background-color:blue;
+    background-color:grey;
 }
 .pop{
     border-radius: 20px;
     transition: width 100ms;
     transition-timing-function: linear;
     margin-right: 25px;
-    background-color: lawngreen;
+    background-color:orange;
 }
 .pop:hover{
     margin-right: 25px;
     height: 30px;
     width: 190px;
-    background-color:cyan;
+    background-color:whitesmoke;
 }
 .songblock{
     height:25vh;
     width:10vw;
-    border:1px solid white;
-   
+    border:1px solid black;
+   background-color: darkgrey;
+
     text-decoration: none;
     color: royalblue;
     margin:0px 10px ;
@@ -106,10 +107,9 @@ body{
     z-index: -1;
     position:absolute;
     min-width:1550px;
-    height: 100vh;
+    height: 75vh;
     overflow: auto;
-     border: 1px solid white;
-     box-shadow: blue;
+     border: 2px solid white;
      color: white;
 }
 
