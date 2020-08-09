@@ -8,6 +8,14 @@
     <title> Online Music Library </title>
     <style type="text/css">
        
+        #t1{
+            border-radius: 20px;
+            width: 250px;
+            height: 30px;
+        }
+        #t1.active{
+            border-style: none;
+        }
 
 
     </style>
@@ -40,31 +48,31 @@
     </div>
     <hr style="color: white;">
     <div style="position:absolute;">
-    <div class="pqueue" style="position:fixed;"> 
-        <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1550px;height: 100vh;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
+    <!-- <div class="pqueue" style="position:fixed;">  -->
+        <div id="content" style="left: 0px;right:0px;margin-left:0px;margin-right: 0px;width: fit-content;"> 
 			<center>
             <form action="" method="post" style="border: 1px dashed white;">
-                     <table style="border: 2px solid white;color: white;" cellspacing="15">   
+                     <table style="background-color: #796ff8;border-radius: 20px ;color: white;" cellspacing="15">   
 						 
 						<tr>
 							<td colspan="2"><h3 align="center"> REGISTRATION OF USER</h3></td>
 						</tr>
 						<tr>
 							<td><h5 align="center">FIRST NAME </h5>
-							<td> <input type="text" name="fname" value="" placeholder="first name"></td>
+							<td> <input id="t1" type="text" name="fname" value="" placeholder="first name"></td>
 						</tr>
 						<tr>
 							<td><h5 align="center">LAST NAME </h5>
-							<td> <input type="text" name="lname" value="" placeholder="last name"></td>
+							<td> <input id="t1" type="text" name="lname" value="" placeholder="last name"></td>
 						</tr>
 						
 						<tr>
 							<td><h5 align="center">MOBILE </h5>
-							<td> <input type="text" name="mobile" value="" placeholder="mobile"></td>
+							<td> <input id="t1" type="text" name="mobile" value="" placeholder="mobile"></td>
 						</tr>
 						<tr>
 							<td><h5 align="center">E-MAIL </h5>
-							<td> <input type="text" name="email" value="" placeholder="email"></td>
+							<td> <input  id="t1"type="text" name="email" value="" placeholder="email"></td>
 						</tr>
 						<tr>
 							<td><h5 align="center">GENDER </h5>
@@ -93,7 +101,7 @@
                     <hr>
                <br><br><br><br><br><br><br><br><br><br>
         </div>  
-    </div>
+    <!-- </div> -->
 </div>
 
 
@@ -107,7 +115,7 @@
     </div>
 </div>
 </div>
-
+<script src="/JS/queue.js"></script>
 </body>
 
 </html>

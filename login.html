@@ -8,11 +8,19 @@
     <title> Online Music Library </title>
     <style type="text/css">
        
+        #t1{
+            border-radius: 20px;
+            width: 250px;
+            height: 30px;
+        }
+        #t1.active{
+            border-style: none;
+        }
 
 
     </style>
 
-</head>
+</head> 
 
 <body>
 
@@ -39,21 +47,21 @@
     </div>
     </div>
     <hr style="color: white;">
-    <div style="position:absolute;">
-    <div class="pqueue" style="position:fixed;"> 
-        <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1550px;height: 100vh;overflow: auto; border: 1px solid white;box-shadow: blue;"> 
-            <center><h2 style="margin-left:2vw;color: white;"> User Login </h2>
-            <form action="" method="post" style="border: 1px dashed white;">
+    <div style="position:relative;">
+    <!-- <div class="pqueue" style="position:fixed;">  -->
+        <div id="content" style="left: 0px;right:0px;margin-left: auto;margin-right: auto;min-width: 100%;" > 
+            <center><h2 style="margin-left:auto;color: white;"> User Login </h2>
+            <form action="" method="post" style="border: 1px dashed white;margin-left: auto;">
                 
-                    <h3><b>User Login</b></h3>
-                     <table style="border: 2px solid white;color: white;" cellspacing="15">   
+                <h1>username=admin Password=admin</h1>
+                     <table style="background-color: #796ff8;border-radius: 20px ;color: white;" cellspacing="15">   
                          <tr>
                              <td>Username: </td>
-                             <td><input type="text" name="username" /></td>
+                             <td><input id="t1" type="text" name="username" /></td>
                          </tr>
                           <tr>
                              <td>Password: </td>
-                             <td><input type="password"  name="password"/></td>
+                             <td><input id="t1" type="password"  name="password"/></td>
                           </tr>
                           <tr>
                           <td> Category </td>
@@ -70,7 +78,7 @@
                               <td colspan="2" align="center"><a style="border: 1px solid white;
                               text-decoration: none;margin-top:20px;padding:4px 25px;
                               background-color: white;color:black;
-                              border-radius: 30px;width: 60px;" href="Mymusic.html">Login</a></td>
+                              border-radius: 30px;width: 60px;" href="#" onclick="validate()">Login</a></td>
                           </tr>  
                          <tr>
                              <td colspan="2">
@@ -91,7 +99,7 @@
                     <hr>
                <br><br><br><br><br><br><br><br><br><br>
         </div>  
-    </div>
+    <!-- </div> -->
 </div>
 
 
@@ -106,6 +114,24 @@
 </div>
 </div>
 
+
+
+<script>
+    function validate()
+    {
+        var username = document.getElementsByName("username");
+        var password = document.getElementsByName("password");
+
+        if(username[0].value=="admin" && password[0].value=="admin")
+        {
+            window.location.href = "MyMusic.html"
+        }
+        else{
+            alert("Invalid User Name or password");
+        }
+    }
+</script>
+<script src="/JS/queue.js"></script>
 </body>
 
 </html>

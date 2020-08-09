@@ -16,6 +16,7 @@
             background-color: white;color:black;
             border-radius: 30px;width: 60px; 
         }
+        
 
     </style>
 
@@ -49,29 +50,24 @@
     <div style="position:absolute;">
     <div class="pqueue" style="position:fixed;">
         <div id="queue" class="queue" >
-            <ul>
+            <ul id="queueul">
                 <h2 style="color: white;">Queue</h2>
-                <li class="pop">Music 1</li>
-                <li class="pop">Music 2</li>
-                <li class="pop">Music 3</li>
-                <li class="pop">Music 4</li>
-                <li class="pop">Music 5</li>
-                <li class="pop">Music 6</li>
-                <li class="pop">Music 7</li>
-                <li class="pop">Music 8</li>
-                <li class="pop">Music 9</li>
-                <li class="pop">Music 10</li>
-                <li class="pop">Music 11</li>
-                <li class="pop">Music 12</li>
-                <li class="pop">Music 13</li>
-                <li class="pop">Music 14</li>
+                
             </ul>
         </div> 
-        <div id="content" style="margin-top: 11vh;z-index: -1;position:absolute;min-width:1350px;height: 100vh;margin-left: 145px;overflow: auto; border: 3px solid white;box-shadow: blue;"> 
+        <div id="content" > 
             <div style="position: absolute;display: inline-block;"><img src="image/online-music.png" alt="pic of the song"
                 height="150px" width="150px" /></div>
         <div style="position:relative;min-height:150px;padding-top:0px;margin-left:150px;color:white">
-            <p id="name">Name Of the song</p>
+            <p id="name"><script>
+                const queryString = window.location.search;
+                console.log(queryString);
+
+                const urlParams = new URLSearchParams(queryString);
+                
+                var value = urlParams.get("item");
+                document.getElementById("name").innerText = value;
+            </script></p>
             <p id="artist">Artist Of the song</p>
             <p id="album">Album of the song</p>
         </div>
@@ -82,7 +78,9 @@
             <img class="img_fav" src="image/favourite.png"/>
         </div>
         <div style="margin-top:40px;">
-            <a class="misc" href="#">Add To Queue</a>
+            <a class="misc"  href="" onclick="addQueue()">Add To Queue</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="misc">Play Now</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="misc" href="#">Save To Playlist</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -100,13 +98,17 @@
 <div style="bottom:0px;position: fixed;min-width: 100vw;">
     <div class="heading"
         style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
-        <h1>Media Player</h1>
+        
+        <audio controls>
+            <source class="heading" src="/Songs/Banana.mp3" type="audio/mp3">
+        </audio>
         <hr>
         <center>&copy; copyrights reserved 2019</center>
     </div>
 </div>
 </div>
 
+<script src="/JS/queue.js"></script>
 </body>
 
 </html>
