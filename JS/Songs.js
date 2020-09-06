@@ -119,7 +119,7 @@ window.onorientationchange = ()=>window.location.reload();
 
                 var col = document.createElement("td");
                 col.className = "col"+j+"";
-                col.style.marginLeft = "20px";
+                // col.style.marginLeft = "20px";
                 // col.style.position = "absolute";
                 // col.style.marginBottom = "10px";
                 col.style.paddingLeft  =col.style.paddingRight  = "1.5%";
@@ -295,10 +295,11 @@ window.onorientationchange = ()=>window.location.reload();
             // alert(document.getElementById("pa"+i+""+j))
             playid = "play "+i+" "+k+" "+j;
             // alert(playid);
-            document.getElementById(playid).addEventListener("click",()=>{ alert("this song will be played once media player will be desinged perfectly."); event.stopImmediatePropagation() },false);
+            document.getElementById(playid).addEventListener("click",()=>{ /*alert("this song will be played once media player will be desinged perfectly.");*/ event.stopImmediatePropagation(); event.stopPropagation(); },false);
         }
       }
     }
+    
 
 
     

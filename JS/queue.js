@@ -1,4 +1,8 @@
 
+if(window.location.pathname  == "/song.html")
+{
+    var addQ = document.getElementById("addQueue").addEventListener("click",addQueue);
+}
 var queue = document.getElementById("queueul");
 var queue2 = document.getElementById("queueul_menu");
 var item  = document.getElementById("name");
@@ -8,11 +12,11 @@ var qexist =false;
 
     var queueC = document.cookie;
     var queueElements = queueC.split(";");
-    console.log("quq"+queueElements)
+    // console.log("quq"+queueElements)
         if(queueC!="")
         {
             queueElements.forEach(element => {
-                console.log(element)
+                // console.log(element)
                 var song = element.split("=");
                 if(song[0] == "queue")
                 {
@@ -54,50 +58,50 @@ var qexist =false;
    function addQueue()
    {
        
-    if(!exist)
-    {
-        var li = document.createElement("li");
-        li.className = "pop";
-        li.innerText = item.innerText;
-        
-        var badge = document.createElement("span");
-        badge.className = "badge badge-secondary badge-pill";
-        badge.innerText= "|>";
-        
-        //badge.style.borderRadius ="5px black";
-
-        if(queueC=="")
+        if(!exist)
         {
-            document.cookie = "queue="+item.innerText;
-        }
-        else
-        {
-            queueElements = queueElements +","+li.innerText;
-        }
+            var li = document.createElement("li");
+            li.className = "pop";
+            li.innerText = item.innerText;
         
-        document.cookie = queueElements;        
-        li.appendChild(badge);
-        li.innerText = item.innerText;
+            var badge = document.createElement("span");
+            badge.className = "badge badge-secondary badge-pill";
+            badge.innerText= "|>";
+        
+            //badge.style.borderRadius ="5px black";
 
-        // if(window.matchMedia("screen and (min-width:1000px)").matches)
-        //                 {   
-        //                     queue.appendChild(li);
-        //                 }
-        //                 else
-        //                 {
-        //                     queue2.appendChild(li);
-        // }
-        queue.appendChild(li);
-        queue2.appendChild(li);
-        // queue2.appendChild(li);
-        
-        
-        
+            if(queueC=="")
+            {
+                document.cookie = "queue="+item.innerText;
+            }
+            else
+            {
+                queueElements = queueElements +","+li.innerText;
+            }
+            
+            document.cookie = queueElements;        
+            li.appendChild(badge);
+            li.innerText = item.innerText;
+
+            // if(window.matchMedia("screen and (min-width:1000px)").matches)
+            //                 {   
+            //                     queue.appendChild(li);
+            //                 }
+            //                 else
+            //                 {
+            //                     queue2.appendChild(li);
+            // }
+            // queue.appendChild(li);
+            // queue2.appendChild(li);
+            // queue2.appendChild(li);
+            
+            
+            
+        }
+        window.location.href = "index.html";
     }
-    window.location.href = "index.html"
-   }
 
-//Event that clears the queue for clear1
+    //Event that clears the queue for clear1
 var clear = document.getElementById("clear");
 clear.addEventListener("click",()=>{
     document.cookie = "queue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
