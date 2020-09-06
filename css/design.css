@@ -1,8 +1,8 @@
-body{
+.body{
     background-color:#d2eafd ;
-    /*background-color: rgb(228, 215, 215);*/
+    /* background-color: #79bff8; */
 }
-.heading{
+.heading1{
     background-color:#0b78d1;
     color: white;
     position:relative;
@@ -14,11 +14,46 @@ body{
     height:5%;
     z-index: 2;
 }  
-.heading a{
+.heading1 a{
     text-decoration: none;
     color: white;
     font-size: 22px;
 }
+.heading1 a:hover{
+    color:seashell;
+}
+.heading2{
+    background-color:#0b78d1;
+    color: white;
+    position:relative;
+    border:0.5px 0px white;
+    top: 0px;
+    max-width:99%;
+    height:50px;
+    border-radius: 10px;
+    /* height:5%; */
+    z-index: 2;
+}  
+.heading2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+.heading2 a:hover{
+    color:seashell;
+}
+
+.footer{
+    background-color:#0b78d1;
+    color: white;
+    position:fixed;
+    border:0.5px 0px white;
+    bottom: 1%;
+    width:99%;
+    border-radius: 10px;
+    height:75px;
+    z-index: -1;
+}  
 
 
 
@@ -27,9 +62,9 @@ body{
 .queue{
     z-index: -1;
     float: left;
-    min-height: 75vh;
-    max-height: 100vh;
-    margin-top: 10vh;
+    height: 79.6%;
+    /* max-height: 100vh; */
+    margin-top: 0.5%;
     width: 140px;
     border-radius:5px 20px 20px 20px;
     overflow-x: hidden;
@@ -42,9 +77,11 @@ body{
 }
 
 .queue:hover{
-   z-index: 1;
-   float: left;
+    z-index:1;
+    float: left;
     width: 250px;
+    display: block;
+    height:79.6%;
     background-color:#796ff8;
 }
 .queue ul li{
@@ -65,32 +102,68 @@ body{
 }
 .pop:hover{
     margin-right: 25px;
-    height: 30px;
+    height: 40px;
     width: 190px;
     background-color:whitesmoke;
 }
 .songblock{
-    height:25vh;
-    width:10vw;
+    height:200px;
+    width:110px;
     border-radius:10px;
-   background-color: white;
+    background-color: white;
     display: inline-flex;
     text-decoration: none;
     color: royalblue;
-    margin:0px 10px ;
+    /* margin-left: 10px; */
 }
 .songblock:hover{
     box-shadow: 3px 3px 5px blue;
+    color  : red;
+    font-style:italic;
 }
 .songblock .image{
     color: blue;
-    height: 20vh;
-    width: 10vw;
+    height: 170px;
+    width: 108px;
+    /* margin-left: 10px; */
+}
+.queuemenu{
+    z-index: 1;
+    float: left;
+    /* height: 83%; */
+    /* max-height: 100vh; */
+    margin-top: 0.5%;
+    /* width: 140px; */
+    border-radius:5px 20px 20px 20px;
+    overflow-x: hidden;
+    overflow:scroll;
+    /* border: 2px solid white; */
+    /* background: #79bff8; */
+    /* position: fixed; */
+    /* background-color:#796ff8; */
+    background-color: white;
+    transition: width 0.3s;
+    transition-timing-function: ease-in-out;
+}
+/* 
+.queuemenu{
+    z-index:1;
+    float: left;
+    width: 250px;
+    display: block;
+    height:100px;
+    background-color:#796ff8;
+} */
+.queuemenu ul li{
+    list-style-type:none;
+    border: 1px solid;
+    margin-top: 15px;
+    padding: 5px;
+    box-shadow: 0px 3px 4px #bbb;
 }
 
 
-
-.menu{
+/* .menu{
     display: inline-flexbox;
     flex-direction: column;
 }
@@ -105,29 +178,258 @@ body{
 .menuitem-active{
     box-shadow: 5px 5px 5px  rgb(99, 20, 173);
     margin-left: 30px;
-}
-
-
+} */
 
 
 #content{
-    margin-top: 14vh;
+    margin-top: 0.5%;
     z-index:-1;
-    position:absolute;
-    min-width:1375px;
+    position:fixed;
+    width:89.6%;
     border-radius: 10px;
-    height: 500px;
-    overflow: auto;
+    height:79.6%;
+    max-width:90%;
+    overflow-x: hidden;
+    /* overflow: auto; */
      /*border: 2px solid white;*/
      color: white;
     margin-left: 145px;
     background-color: #79bff8;
-    box-shadow: blue;
+    /* box-shadow: blue; */
+}
+#play{
+    opacity: 0.5;   
+}
+/*this is class for song.html to show different buttons*/       
+
+
+
+
+
+.queue::-webkit-scrollbar,.queuemenu::-webkit-scrollbar {
+display: none;
+}
+@media screen and (min-width:1000px) {
+    .heading2{
+        display: none;
+    }
+    
+    #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-width:1080px) {
+    #content{
+        height: 86%;
+        width : 85.4%
+    }
+    .queue{
+        height: 86%;
+    }
+    
+    #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-width:999px) {
+    div.queue{
+        display: none;
+    }
+    #content{
+        margin: 0px;
+        min-width:99%;
+        height: 87%;
+    }
+    .heading1{
+        display: none;
+    }
+    .heading2{
+        display: block;
+    }
+    
+    #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-height:1058px) and (max-width:821px) {
+    div.queue{
+        display: none;
+    }
+    #content{
+        margin: 0px;
+        min-width:99%;
+        height: 79.6%;
+    }
+    .heading1{
+        display: none;
+    }
+    .heading2{
+        display: block;
+    }
+    #notsupported{
+      display: none;
+  }
+  }
+  @media screen and (max-height:1070px)
+  {
+      #content{
+          height: 79.6%;
+      }
+      #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-height:750px)
+  {
+      #content{
+          height: 79.6%;
+      }
+      #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-height:565px)
+  {
+      #content{
+          height: 81%;
+      }
+      #notsupported{
+        display: none;
+    }
+  }
+  
+  @media screen and (max-height:472px)
+  {
+      #content{
+          height: 75%;
+      }
+      #notsupported{
+        display: none;
+    }
+  }
+  @media screen and (max-height:401px)
+  {
+      #content{
+          height: 70%;
+      }
+      #notsupported{
+        display: none;
+    }
+
+  }
+  @media screen and (max-height:340px)
+  {
+      #content{
+          height: 65%;
+        }
+        
+  }
+  @media screen and (max-height:275px)
+  {
+      #content{
+          display: none;
+      }
+      #notsupported{
+          display: block;
+      }
+      .heading2{
+          display: none;
+      }
+      .footer{
+          display: none;
+      }
+  }
+
+  @media screen and (min-height:1500px) and (max-width:821px) {
+    div.queue{
+        display: none;
+    }
+    #content{
+        margin: 0px;
+        min-width:99%;
+        height: 86%;
+    }
+    #colno{
+        padding : 4%;
+    }
+  }
+
+  @media screen and  (max-width:599px) {
+    .songblock{
+        height: 220px;
+        width: 200px;
+    }
+    .songblock .image{
+        height: 180px;
+        width: 200px;
+    }
+  }
+  @media screen and  (max-width:999px) {
+    
+  }
+  @media screen and (max-width:1080px) {
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .queue::-webkit-scrollbar,#content::-webkit-scrollbar {
+    width: 0.7em;
+  }
+   
+  .queue::-webkit-scrollbar,#content::-webkit-scrollbar-track {
+    background:transparent;
+    /* box-shadow: inset 0 0 6px ; */
+  }
+  .queue::-webkit-scrollbar,#content::-webkit-scrollbar-thumb {
+    background:linear-gradient(0deg, rgba(0, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+    /* background-color: blueviolet; */
+    border-radius: 20px;  
+    /* outline: 1px solid slategrey; */
+    opacity: 0;
+    box-shadow: 0px 0px 100000vh #79bff8;
+  } 
+
+
+/* #content::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+#content::-webkit-scrollbar-track {
+    background:  linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(7, 0, 211, 1) 100%);
+  }
+  
+#content::-webkit-scrollbar-thumb {
+    background: transparent; /* opacity: 0; should do the thing either
+    box-shadow: 0px 0px 0px 100000vh #79bff8;
+  } */
+
+  
+#clear{
+    transition: width 1s height 1s;
+    box-shadow: 0px 0px 5px 0px lightyellow;
+}
+#clear:hover{
+    width: 25%;
+    height: 4.5%;
+    color: white;
 }
 
-#content::-webkit-scrollbar {
-display: none;
+#clear2{
+    transition: width 1s height 1s;
+    box-shadow: 0px 0px 5px 0px lightyellow;
 }
-.queue::-webkit-scrollbar {
-display: none;
+#clear2:hover{
+    width: 25%;
+    height: 7%;
+    color: white;
 }

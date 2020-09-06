@@ -1,114 +1,169 @@
-
-
 <!DOCTYPE html>
 <html>
 
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="image/online-music.png" type="image" />
-    <link rel="stylesheet" href="css/design.css"/>
+    <link rel="stylesheet" href="/css/design.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <title> Online Music Library </title>
-    <style type="text/css">
-       
-        .misc{
-            border: 1px solid white;
-            text-decoration: none;margin-top:20px;padding:4px 25px;
-            background-color: white;color:black;
-            border-radius: 30px;width: 60px; 
-        }
-        
-
-    </style>
 
 </head>
 
-<body>
-
-
-
-    <div style="position: fixed;min-width: 100vw;margin-bottom: 10px;">
-        <div class="heading">
-        
-        <div class="menu">
-            <!-- <div style="display: none;"> -->
-            <div style="display: inline-flex;"><img src="image/online-music.png" height="70px" width="70px" /></div>
-            <a class="menuitem-active" href="index.html">Home</a>
-            <a class="menuitem" href="Browse.html">Browse</a>
-            <a class="menuitem" href="Discover.html">Discover</a>
-            <a class="menuitem" href="Radio.html">Radio</a>
-            <a class="menuitem" href="login.html">My Music</a>
-
-
-
-            <input type="text" name="search" value="" placeholder="Search for songs and more" style="margin-left:30px;">
-            <input type="submit" name="search">
-            <a class="menuitem" href="login.html" >Login</a>
-        </div>
-    </div>
-    </div>
-    <hr style="color: white;">
-    <div style="position:absolute;">
-    <div class="pqueue" style="position:fixed;">
-        <div id="queue" class="queue" >
-            <ul id="queueul">
-                <h2 style="color: white;">Queue</h2>
-                
+<body class="body" id="body">
+    <div class="heading2"> 
+        <div class="dropdown" style="float: right;margin-right: 10%;">
+            <button class="btn btn-warning  dropdown-toggle "   id="dp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Menu</button>
+            <ul aria-labelledby="dp" role="menu" class="dropdown-menu ">
+                <li class="dropdown-item active" role="menuitem"><a style="color: black;">Home</a></li>
+                <li class="dropdown-item"  role="menuitem"><a style="color: black;text-decoration:none;" href="Browse.html" >Browse</a></li>
+                <li class="dropdown-item"  role="menuitem"><a style="color: black;text-decoration:none;" href="Discover.html">Discover</a></li>
+                <li class="dropdown-item"  role="menuitem"><a style="color: black;text-decoration:none;" href="Radio.html">Radio</a></li>
+                <li class="dropdown-item"  role="menuitem"><a style="color: black;text-decoration:none;" href="login.html">MyMusic</a></li>
+                <li class="dropdown-divider" ></li>
+                <li class="dropdown-item" role="menuitem"><a>Search</a></li>
+                <li class="dropdown-item" role="menuitem"><a style="color: black;text-decoration:none;" href="login.html">Login</a></li>
             </ul>
-        </div> 
-        <div id="content" > 
-            <div style="position: absolute;display: inline-block;"><img src="image/online-music.png" alt="pic of the song"
-                height="150px" width="150px" /></div>
-        <div style="position:relative;min-height:150px;padding-top:0px;margin-left:150px;color:white">
-            <p id="name"><script>
-                const queryString = window.location.search;
-                console.log(queryString);
-
-                const urlParams = new URLSearchParams(queryString);
+            
+        </div>
+        <div class="dropdown" style="float: right;margin-right: 02%;">
+            <button class="btn btn-warning  dropdown-toggle "   id="dp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Queue</button>
+            <ul aria-labelledby="dp" id="" role="menu" class="dropdown-menu dropdown-menu-left queuemenu" style="height: 500px;width: 200px;">
+                <ul id="queueul_menu" class="queueul">
+                    <!-- Queue menu for lower width resolution-->
+                        <span id="clear2"  class="btn badge badge-secondary" style="
+                            font-size: medium;
+                            border-radius: 75px;right: 20px;top: 15px;
+                            position: relative;float:right;margin-bottom: 25px;">
+                            Clear
+                        <br>
+                    </span>
+                    
+                          
+                </ul>
+            </ul>
+            
+        </div>
+        Online Music Library
+    </div>
+    <div class="heading1">
+        <div style="float: right;display: inline-flex;">
+            <input type="text" class="form-control" name="search" value="" placeholder="Search for songs and more">
+            <input type="submit" class="btn btn-success " name="submit" value="Search">
+            <a class="btn btn-primary" href="login.html" >Login<span class="badge"></a><span class="glyphicon glyphicon-log-in"></span></span>
+        </div>
+        <div style="display:inline-flex">    
+            <nav class="nav nav-tabs">
+                <div>
+                    <img src="image/online-music.png" height="50px" width="50px" />
+                </div>
                 
-                var value = urlParams.get("item");
-                document.getElementById("name").innerText = value;
-            </script></p>
-            <p id="artist">Artist Of the song</p>
-            <p id="album">Album of the song</p>
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="Browse.html">Browse</a>
+                <a class="nav-link" href="Discover.html">Discover</a>
+                <a class="nav-link" href="Radio.html">Radio</a>
+                <a class="nav-link" href="login.html">My Music</a>
+            </nav>
         </div>
-
-
-        <div>
-            <img style="border-color: black" class="img_like" src="image/like50px.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img class="img_fav" src="image/favourite.png"/>
-        </div>
-        <div style="margin-top:40px;">
-            <a class="misc"  href="" onclick="addQueue()">Add To Queue</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="misc">Play Now</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="misc" href="#">Save To Playlist</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="misc" href="#">Download</a>
-        </div>
-        <div style="margin-top:40px;">
-            <a href="#">Ratings star will appear here.</a>
-        </div>
-        </div>  
     </div>
-</div>
+    <div class="pqueue">
+        <div id="queue" class="queue" >
+            <ul id="queueul" class="queueul">
+                <h2 id="queue" style="float:left;color: white;display: inline-flex;">Queue</h2>
+                    <span id="clear"  class="btn badge badge-secondary" style="display:none;
+                        font-size: medium;
+                        border-radius: 75px;right: 20px;top: 15px;
+                        position: absolute;">
+                    Clear
+                </span>
+                
+                      
+            </ul>
+        </div>        
 
-
-<div style="position:relative">
-<div style="bottom:0px;position: fixed;min-width: 100vw;">
-    <div class="heading"
-        style="position:relative;box-shadow: blue;border:0.5px 0px white;top: 0px; max-width:100%;max-height:fit-content;min-height:5vh;">
-        
-        <audio controls>
-            <source class="heading" src="/Songs/Banana.mp3" type="audio/mp3">
+        <h2 id="notsupported"> This website is not supported in this resolution. </h2>
+        <input id="colno" style="display: none;" type="number" min="0" max="10" value="" disabled/>
+        <div id="content" class="container-fluid">
+            <div > 
+                <div style="position: absolute;display: inline-block;"><img id="src" alt="pic of the song"
+                    height="150px" width="150px" /></div>
+            <div style="position:relative;min-height:150px;padding-top:0px;margin-left:150px;color:white">
+                <p id="name"><script>
+                    const queryString = window.location.search;
+                    console.log(queryString);
+    
+                    const urlParams = new URLSearchParams(queryString);
+                    
+                    var value = urlParams.get("item");
+                    var src = urlParams.get("song");
+                    document.getElementById("name").innerText = value;
+                    if(src == undefined)
+                        document.getElementById("src").src = "image/online-music.png";
+                    else
+                    document.getElementById("src").src = src;
+                    document.getElementById("name").innerText = value;
+                </script></p>
+                <p id="artist">Artist Of the song</p>
+                <p id="album">Album of the song</p>
+            </div>
+    
+    
+            <div>
+                <img style="border-color: black" class="img_like" src="image/like50px.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img class="img_fav" src="image/favourite.png"/>
+            </div>
+            <div style="margin-top:40px;">
+                <a class="btn btn-light " style="border-radius: 30px;"  href="" onclick="addQueue()">Add To Queue</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-light" style="border-radius: 30px;">Play Now</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-light"  style="border-radius: 30px;" href="#">Save To Playlist</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-light" style="border-radius: 30px;" href="#">Download</a>
+            </div>
+            <div style="margin-top:40px;">
+                <a href="#">Ratings star will appear here.</a>
+            </div>
+            </div>  
+        </div>
+    </div>
+        </div>
+      
+    </div>            
+    <div class="footer">        
+        <audio controls style="width: 99%;">
+            <source id="audSrc" class="heading" src="/Songs/Banana.mp3" type="audio/mp3">
         </audio>
-        <hr>
-        <center>&copy; copyrights reserved 2019</center>
+        <hr>        
     </div>
-</div>
-</div>
-
+    <!-- <div id="modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      
+<script src="/JS/jquery-3.5.1.min.js"></script>
 <script src="/JS/queue.js"></script>
+<!-- <script src="/JS/modal.js"></script> -->
+<script src="/JS/jquery-3.5.1.slim.min.js"></script>
+<script src="/JS/popper.min.js"></script>
+<script src="/JS/bootstrap.min.js"></script>
 </body>
 
 </html>

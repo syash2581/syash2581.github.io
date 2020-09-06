@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+.sidebar{
+    min-width: 250px;
+    max-width: fit-content;
+    height: 100vw;
+    border: 1px solid white;
+    color: white;
+}
+
+.heading{
+    background-color: black;
+    color: white;
+}  
+body .heading a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+
+@media screen and (min-width:400px)
+{
+    .menu{
+        display: none;
+        background-color: blue;   
+    }
+}
+@media screen and (max-width:400px)
+{
+    .menu{
+        display: none;
+        background-color: greenyellow;   
+    }
+}
