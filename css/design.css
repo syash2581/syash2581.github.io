@@ -209,6 +209,9 @@
 .queue::-webkit-scrollbar,.queuemenu::-webkit-scrollbar {
 display: none;
 }
+#signupform::-webkit-scrollbar {
+    display: none;
+    }
 @media screen and (min-width:1000px) {
     .heading2{
         display: none;
@@ -327,10 +330,10 @@ display: none;
   @media screen and (max-height:275px)
   {
       #content{
-          display: none;
+          display: block;
       }
       #notsupported{
-          display: block;
+          display: none;
       }
       .heading2{
           display: none;

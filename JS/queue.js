@@ -1,5 +1,8 @@
+var url = window.location.pathname;
+var tokens = url.split("/");
+var len = tokens.length;
 
-if(window.location.pathname  == "/song.html")
+if(tokens[len-1] == "song.html")
 {
     var addQ = document.getElementById("addQueue").addEventListener("click",addQueue);
 }
@@ -25,12 +28,13 @@ var qexist =false;
                     qexist = true;
                     list.forEach(element => {
                         // console.log(element)
-                        if(window.location.pathname == "/song.html")
+                        if(tokens[len-1] =="song.html")
                         {   
                            // alert(item.innerText)
                             //alert(element)
                             if(item.innerText==element)
                             {
+                                alert("true");
                                 exist=true;
                             }
                         }
@@ -83,14 +87,14 @@ var qexist =false;
             li.appendChild(badge);
             li.innerText = item.innerText;
 
-            // if(window.matchMedia("screen and (min-width:1000px)").matches)
-            //                 {   
-            //                     queue.appendChild(li);
-            //                 }
-            //                 else
-            //                 {
-            //                     queue2.appendChild(li);
-            // }
+            if(window.matchMedia("screen and (min-width:1000px)").matches)
+                            {   
+                                queue.appendChild(li);
+                            }
+                            else
+                            {
+                                queue2.appendChild(li);
+             }
             // queue.appendChild(li);
             // queue2.appendChild(li);
             // queue2.appendChild(li);
@@ -98,19 +102,27 @@ var qexist =false;
             
             
         }
-        window.location.href = "index.html";
+        if(tokens[len-2] == "user")
+        {
+            window.location.href = "index.html";
+        }
+        else if(tokens[len-2] == "admin")
+        {
+            window.location.href = "home.html";
+        }
+        
     }
 
     //Event that clears the queue for clear1
 var clear = document.getElementById("clear");
 clear.addEventListener("click",()=>{
-    document.cookie = "queue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "queue=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     location.reload();
 });
 //Event that clears the queue for clear2
 var clear = document.getElementById("clear2");
 clear.addEventListener("click",()=>{
-    document.cookie = "queue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "queue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; ";
     location.reload();
 });
 

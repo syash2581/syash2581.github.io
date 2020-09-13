@@ -130,7 +130,7 @@ window.onorientationchange = ()=>window.location.reload();
 
                 var cardimage = document.createElement("img");
                 cardimage.className = "image card-image";
-                cardimage.src = "image/songs/"+center.innerText+".jpeg";
+                cardimage.src = "/image/songs/"+center.innerText+".jpeg";
                 cardimage.style.zIndex = "1";
 
                 var cardbody = document.createElement("div");
@@ -295,7 +295,7 @@ window.onorientationchange = ()=>window.location.reload();
             // alert(document.getElementById("pa"+i+""+j))
             playid = "play "+i+" "+k+" "+j;
             // alert(playid);
-            document.getElementById(playid).addEventListener("click",()=>{ /*alert("this song will be played once media player will be desinged perfectly.");*/ event.stopImmediatePropagation(); event.stopPropagation(); },false);
+            document.getElementById(playid).addEventListener("click",(event)=>{ alert("this song will be played once media player will be desinged perfectly.");  event.preventDefault();  },false);
         }
       }
     }
